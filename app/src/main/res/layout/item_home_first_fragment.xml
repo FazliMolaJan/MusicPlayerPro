@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemview"
+            type="app.music.viewholder.AlbumViewHolder" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_tiny"
+            android:foreground="@drawable/selectable_item_background"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="@dimen/padding_medium_plus_four"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/cover_art"
+                android:layout_width="@dimen/album_covert_art_size"
+                android:layout_height="@dimen/album_covert_art_size"
+                android:layout_gravity="center"
+                android:background="?attr/main_background_color"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_album" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_song_album"
+                style="@style/wrap_wrap"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/padding_tiny"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_small_plus_two"
+                android:layout_toLeftOf="@id/btn_option"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@{itemview.album}"
+                android:textColor="?attr/recycler_text_color" />
+
+            <TextView
+                android:id="@+id/txt_song_artist"
+                style="@style/wrap_wrap"
+                android:layout_below="@id/txt_song_album"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/padding_tiny"
+                android:layout_marginBottom="@dimen/padding_tiny_plus_one"
+                android:layout_toLeftOf="@id/btn_option"
+                android:ellipsize="end"
+                android:fontFamily="@font/arial"
+                android:maxLines="1"
+                android:text="@{itemview.artist}"
+                android:textColor="?attr/recycler_text_color"
+                android:textSize="@dimen/small_info_text" />
+
+            <ImageButton
+                android:id="@+id/btn_option"
+                style="@style/wrap_wrap"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_menu_three_dot" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

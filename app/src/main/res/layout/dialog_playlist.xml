@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/linear_header"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center_vertical"
+            android:text="Save song to..."
+            android:textColor="?attr/recycler_text_color" />
+
+        <Button
+            android:id="@+id/button_add_playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/transparent"
+            android:buttonTint="?attr/recycler_text_color"
+            android:drawableLeft="@drawable/ic_dialog_add"
+            android:foreground="@drawable/selectable_item_background"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:text="new playlist"
+            android:textColor="?attr/recycler_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_height"
+        android:layout_below="@id/linear_header"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="?attr/recycler_text_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/separator" />
+
+</RelativeLayout>

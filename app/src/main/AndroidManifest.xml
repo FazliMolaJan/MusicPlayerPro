@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.music">
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="app.music.ui.screen.setting.ChooseThemeActivity"
+            android:label="@string/title_activity_choose_theme" />
+        <activity
+            android:name="app.music.ui.screen.detailplaymv.DetailPlayMvActivity"
+            android:label="@string/title_activity_detail_play_mv"
+            android:theme="@style/AppThemeTransparentStatusBar" />
+        <activity
+            android:name="app.music.ui.screen.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.music.ui.screen.home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="app.music.ui.screen.setting.SettingActivity" />
+        <activity android:name="app.music.ui.screen.equalizer.EqualizerActivity" />
+        <activity
+            android:name="app.music.ui.screen.detailplaymusic.DetailPlayMusicActivity"
+            android:label="@string/title_activity_detail_play_music"
+            android:parentActivityName="app.music.ui.screen.home.HomeActivity" />
+        <activity android:name="app.music.ui.screen.detailartist.DetailArtistActivity" />
+        <activity android:name="app.music.ui.screen.detailalbum.DetailAlbumActivity" />
+        <activity android:name="app.music.ui.screen.detailgenre.DetailGenreActivity" />
+        <activity android:name="app.music.ui.screen.detailplaylist.DetailPlaylistActivity" />
+        <activity android:name="app.music.ui.screen.onlinemusic.OnlineHomeActivity" />
+        <activity android:name="app.music.ui.screen.detailplaylist.DetailOnlinePlaylistActivity" />
+        <activity android:name="app.music.ui.screen.detailfavorite.DetailFavoriteActivity" />
+        <activity android:name="app.music.ui.screen.detailfolder.DetailFolderActivity" />
+
+        <service android:name=".service.MusicService" />
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

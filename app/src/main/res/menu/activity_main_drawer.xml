@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Offline Music">
+
+        <menu>
+
+            <group
+                android:id="@+id/group_offline_music"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_albums"
+                    android:icon="@drawable/ic_album"
+                    android:title="@string/nav_albums" />
+                <item
+                    android:id="@+id/nav_songs"
+                    android:icon="@drawable/ic_menu_song"
+                    android:title="@string/nav_songs" />
+                <item
+                    android:id="@+id/nav_artist"
+                    android:icon="@drawable/ic_menu_artist"
+                    android:title="@string/nav_artist" />
+                <item
+                    android:id="@+id/nav_genres"
+                    android:icon="@drawable/ic_menu_genre"
+                    android:title="@string/nav_genres" />
+
+                <item
+                    android:id="@+id/nav_playlists"
+                    android:icon="@drawable/ic_menu_playlist"
+                    android:title="@string/nav_playlists" />
+                <item
+                    android:id="@+id/nav_folders"
+                    android:icon="@drawable/ic_menu_folder"
+                    android:title="@string/nav_folders" />
+
+            </group>
+        </menu>
+    </item>
+
+    <group
+        android:id="@+id/group_online_music"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_online_music"
+            android:icon="@drawable/ic_menu_online_music"
+            android:title="Online Music" />
+    </group>
+
+    <group
+        android:id="@+id/group_favorite"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_favorite_selected"
+            android:title="Favorite" />
+    </group>
+
+    <item android:title="Others">
+
+        <menu>
+
+            <group
+                android:id="@+id/group_others"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_equalizer"
+                    android:icon="@drawable/ic_menu_equalizer"
+                    android:title="@string/nav_equalizer" />
+                <item
+                    android:id="@+id/nav_sleep_timer"
+                    android:icon="@drawable/ic_menu_sleep_timer"
+                    android:title="@string/nav_sleep_timer" />
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="@string/nav_share" />
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/ic_menu_feedback"
+                    android:title="@string/nav_feedback" />
+                <item
+                    android:id="@+id/nav_we_are_social"
+                    android:icon="@drawable/ic_menu_social"
+                    android:title="@string/nav_we_are_social" />
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_menu_settings"
+                    android:title="@string/nav_settings" />
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

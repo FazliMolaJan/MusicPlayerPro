@@ -1,0 +1,415 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/black</item>
+        <!--<item name="colorPrimaryDark">@android:color/holo_orange_light</item>-->
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/black</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="main_transparent_color">#80000000</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="main_color">#000000</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+    <style name="WhiteDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="BlackDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="WhiteTextToolBarStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/WhiteDrawerArrowStyle</item>
+    </style>
+
+    <style name="BlackTextToolBarStyle" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="drawerArrowStyle">@style/BlackDrawerArrowStyle</item>
+    </style>
+
+    <style name="DarkAppTheme" parent="AppTheme">
+        <item name="recycler_text_color">@color/white</item>
+        <item name="home_toolbar_popup_theme">@style/Theme.AppCompat.Light</item>
+        <item name="transparent_recycler_text_color">@color/white_transparent_level_seven</item>
+        <item name="blur_overlay_color">#66000000</item>
+        <item name="transparent_recycler_text_background">#55000000</item>
+        <item name="transparent_separator">#55ffffff</item>
+        <item name="main_background_color">#000000</item>
+        <item name="indicator_unselected_color">#ffffff</item>
+    </style>
+
+    <style name="DarkAppThemeWhiteBottomBarText" parent="DarkAppTheme">
+        <item name="toolbar_theme">@style/BlackTextToolBarStyle</item>
+        <item name="toolbar_text_color">#ffffff</item>
+        <item name="progress_bar_background">@color/white_transparent_level_three</item>
+        <item name="toolbar_transparent_text_color">@color/white_transparent_level_seven</item>
+    </style>
+
+    <style name="DarkAppThemeBlackBottomBarText" parent="DarkAppTheme">
+        <item name="toolbar_theme">@style/WhiteTextToolBarStyle</item>
+        <item name="toolbar_text_color">#000000</item>
+        <item name="progress_bar_background">@color/black_transparent_level_three</item>
+        <item name="toolbar_transparent_text_color">@color/black_transparent_level_seven</item>
+    </style>
+
+    <style name="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText" parent="DarkAppThemeWhiteBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat</item>
+        <item name="detail_toolbar_text_color">#ffffff</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99000000</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#00000000</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="DarkAppThemeWhiteBottomBarTextBlackDetailToolBarText" parent="DarkAppThemeWhiteBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="detail_toolbar_text_color">#000000</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99ffffff</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#00ffffff</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="DarkAppThemeBlackBottomBarTextBlackDetailToolBarText" parent="DarkAppThemeBlackBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="detail_toolbar_text_color">#000000</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99ffffff</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#00ffffff</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="DarkAppThemeBlackBottomBarTextWhiteDetailToolBarText" parent="DarkAppThemeBlackBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat</item>
+        <item name="detail_toolbar_text_color">#ffffff</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99000000</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#00000000</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="LightAppTheme" parent="AppTheme">
+        <item name="recycler_text_color">@color/black</item>
+        <item name="home_toolbar_popup_theme">@style/Theme.AppCompat</item>
+        <item name="transparent_recycler_text_color">@color/black_transparent_level_seven</item>
+        <item name="blur_overlay_color">#66ffffff</item>
+        <item name="transparent_recycler_text_background">#55ffffff</item>
+        <item name="transparent_separator">#55000000</item>
+        <item name="main_background_color">#ffffff</item>
+        <item name="indicator_unselected_color">#000000</item>
+    </style>
+
+    <style name="LightAppThemeWhiteBottomBarText" parent="LightAppTheme">
+        <item name="toolbar_theme">@style/BlackTextToolBarStyle</item>
+        <item name="toolbar_text_color">#ffffff</item>
+        <item name="progress_bar_background">@color/white_transparent_level_three</item>
+        <item name="toolbar_transparent_text_color">@color/white_transparent_level_seven</item>
+    </style>
+
+    <style name="LightAppThemeBlackBottomBarText" parent="LightAppTheme">
+        <item name="toolbar_theme">@style/WhiteTextToolBarStyle</item>
+        <item name="toolbar_text_color">#000000</item>
+        <item name="progress_bar_background">@color/black_transparent_level_three</item>
+        <item name="toolbar_transparent_text_color">@color/black_transparent_level_seven</item>
+    </style>
+
+    <style name="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText" parent="LightAppThemeWhiteBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat</item>
+        <item name="detail_toolbar_text_color">#ffffff</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99000000</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#44000000</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="LightAppThemeBlackBottomBarTextBlackDetailToolBarText" parent="LightAppThemeBlackBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="detail_toolbar_text_color">#000000</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99ffffff</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#44ffffff</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="LightAppThemeWhiteBottomBarTextBlackDetailToolBarText" parent="LightAppThemeWhiteBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="detail_toolbar_text_color">#000000</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99ffffff</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#44ffffff</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <style name="LightAppThemeBlackBottomBarTextWhiteDetailToolBarText" parent="LightAppThemeBlackBottomBarText">
+        <item name="detail_toolbar_theme">@style/ThemeOverlay.AppCompat</item>
+        <item name="detail_toolbar_text_color">#ffffff</item>
+        <item name="detail_toolbar_theme_scrim_start_color">#99000000</item>
+        <item name="detail_toolbar_theme_scrim_center_color">#44000000</item>
+        <item name="detail_toolbar_theme_scrim_end_color">@android:color/transparent</item>
+    </style>
+
+    <!--color theme-->
+
+    <style name="DarkThemeBlack" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="main_transparent_color">#80000000</item>
+        <item name="main_color">#000000</item>
+    </style>
+
+    <style name="LightThemeBlack" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="main_transparent_color">#80000000</item>
+        <item name="main_color">#000000</item>
+    </style>
+
+    <style name="DarkThemeIndigo" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/indigo</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#804B0082</item>
+        <item name="main_color">#4B0082</item>
+    </style>
+
+    <style name="LightThemeIndigo" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/indigo</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#804B0082</item>
+        <item name="main_color">#4B0082</item>
+    </style>
+
+    <style name="DarkThemeNavy" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80000080</item>
+        <item name="main_color">@color/navy</item>
+    </style>
+
+    <style name="LightThemeNavy" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80000080</item>
+        <item name="main_color">@color/navy</item>
+    </style>
+
+    <style name="DarkThemeMaroon" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/maroon</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80800000</item>
+        <item name="main_color">@color/maroon</item>
+    </style>
+
+    <style name="LightThemeMaroon" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/maroon</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80800000</item>
+        <item name="main_color">@color/maroon</item>
+    </style>
+
+    <style name="DarkThemeDarkRed" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/dark_red</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#808B0000</item>
+        <item name="main_color">@color/dark_red</item>
+    </style>
+
+    <style name="LightThemeDarkRed" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/dark_red</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#808B0000</item>
+        <item name="main_color">@color/dark_red</item>
+    </style>
+
+    <style name="DarkThemeBrown" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80A52A2A</item>
+        <item name="main_color">@color/brown</item>
+    </style>
+
+    <style name="LightThemeBrown" parent="LightAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80A52A2A</item>
+        <item name="main_color">@color/brown</item>
+    </style>
+
+    <style name="DarkThemeMagenta" parent="DarkAppThemeWhiteBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80FF00FF</item>
+        <item name="main_color">#FF00FF</item>
+    </style>
+
+    <style name="LightThemeMagenta" parent="LightAppThemeBlackBottomBarTextWhiteDetailToolBarText">
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80FF00FF</item>
+        <item name="main_color">#FF00FF</item>
+    </style>
+
+    <style name="DarkThemeDeepSkyBlue" parent="DarkAppThemeWhiteBottomBarTextBlackDetailToolBarText">
+        <item name="colorPrimary">@color/deep_sky_blue</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#8000BFFF</item>
+        <item name="main_color">@color/deep_sky_blue</item>
+    </style>
+
+    <style name="LightThemeDeepSkyBlue" parent="LightAppThemeBlackBottomBarTextBlackDetailToolBarText">
+        <item name="colorPrimary">@color/deep_sky_blue</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#8000BFFF</item>
+        <item name="main_color">@color/deep_sky_blue</item>
+    </style>
+
+    <style name="AppThemeTransparentStatusBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="main_transparent_color">#80000000</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="DialogEditTextStyle" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <!--bottomNavigationStyle-->
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    ///////////////////////////////
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog_fragment</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    ///////////////////////////
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog_fragment</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <!--Layout style. Width-Height -->
+    <style name="match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wrap_match">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- custom text view toolbar-->
+    <style name="StyleTextViewToolBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--........................................................-->
+
+    <style name="NavigationDrawerTheme" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorControlHighlight">@color/nav_selected_item_bg</item>
+    </style>
+
+    <style name="NavigationView" parent="NavigationDrawerTheme">
+        <item name="android:textColorSecondary">?attr/recycler_text_color</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="SplashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <item name="searchBackground">@color/transparent</item>
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search</item>
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close</item>
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back</item>
+        <item name="searchSuggestionBackground">@color/fbtn_color</item>
+        <item name="voiceHintPrompt">@string/hint_prompt</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray_50</item>
+        <item name="android:hint">@string/search_hint</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    ////////////////////////
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/unused_rounded_dialog</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

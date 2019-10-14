@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/on"
+        android:state_activated="true">
+        <bitmap android:src="@drawable/play_animation_28" />
+    </item>
+
+    <item
+        android:id="@+id/off">
+        <bitmap android:src="@drawable/play_animation_14" />
+    </item>
+
+    <transition
+        android:drawable="@drawable/unused_pause_to_play_animation"
+        android:fromId="@+id/on"
+        android:toId="@+id/off" />
+
+    <transition
+        android:drawable="@drawable/unused_play_to_pause_animation"
+        android:fromId="@id/off"
+        android:toId="@id/on" />
+
+</animated-selector>

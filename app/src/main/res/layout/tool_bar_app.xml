@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tv_tool_bar_center"
+            style="@style/StyleTextViewToolBar"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_tool_bar_right"
+            style="@style/StyleTextViewToolBar"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_left"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/dimen_large" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="?attr/actionBarSize"
+            android:layout_marginRight="?attr/actionBarSize"
+            android:gravity="start"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_right"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dimen_large" />
+    </RelativeLayout>
+</layout>

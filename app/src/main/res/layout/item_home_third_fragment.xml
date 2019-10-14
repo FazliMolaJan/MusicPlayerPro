@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemview"
+            type="app.music.viewholder.ArtistViewHolder" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:foreground="@drawable/selectable_item_background"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_song_artist"
+            style="@style/wrap_wrap"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_toLeftOf="@id/btn_option"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:text="@{itemview.artist}"
+            android:textColor="?attr/recycler_text_color" />
+
+        <TextView
+            android:id="@+id/txt_track_count"
+            style="@style/wrap_wrap"
+            android:layout_below="@id/txt_song_artist"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_toLeftOf="@id/btn_option"
+            android:ellipsize="end"
+            android:fontFamily="@font/arial"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:text="@{itemview.trackAndAlbumInfo}"
+            android:textColor="?attr/transparent_recycler_text_color"
+            android:textSize="@dimen/small_info_text" />
+
+        <ImageButton
+            android:id="@+id/btn_option"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:padding="@dimen/padding_large"
+            app:srcCompat="@drawable/ic_menu_three_dot" />
+
+    </RelativeLayout>
+
+</layout>

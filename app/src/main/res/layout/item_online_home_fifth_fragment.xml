@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="itemview"
+            type="app.music.viewholder.OnlinePlaylistViewHolder" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifth_recycler_item_height"
+        android:background="@color/transparent"
+        android:foreground="@drawable/selectable_item_background"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_small">
+
+        <ImageView
+            android:id="@+id/cover_art"
+            style="@style/match_match"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rcv_bg" />
+
+        <ImageView
+            android:id="@+id/image_accent_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_black_transparent" />
+
+        <TextView
+            android:id="@+id/txt_song_album"
+            style="@style/wrap_wrap"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:text="@{itemview.playlistName}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_song_artist"
+            style="@style/wrap_wrap"
+            android:layout_below="@id/txt_song_album"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/arial"
+            android:maxLines="1"
+            android:padding="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:text="@{itemview.songCount}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_fourteen" />
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_option"-->
+        <!--style="@style/wrap_wrap"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_margin="@dimen/padding_small"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:paddingBottom="@dimen/padding_small"-->
+        <!--app:srcCompat="@drawable/ic_menu_three_dot" />-->
+
+    </RelativeLayout>
+
+</layout>

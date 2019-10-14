@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="itemview"
+            type="app.music.viewholder.DialogOnlinePlaylistViewHolder" />
+    </data>
+
+    <RelativeLayout
+        style="@style/match_wrap"
+        android:foreground="@drawable/selectable_item_background">
+
+        <TextView
+            android:id="@+id/text_playlist_name"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@{itemview.playlistName}"
+            android:textColor="?attr/recycler_text_color" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="settingActivityViewModel"
+            type="app.music.viewmodel.SettingActivityViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/main_background_color"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_main_color_transparent"
+            android:fitsSystemWindows="true"
+            android:theme="?attr/toolbar_theme"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/transparent"
+                android:fitsSystemWindows="true"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            style="@style/match_match"
+            android:background="@color/transparent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/main_background_color"
+                android:clipToPadding="false"
+                android:paddingTop="?actionBarSize"
+                android:scrollbarStyle="outsideOverlay">
+
+                <LinearLayout
+                    style="@style/match_match"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:foreground="@drawable/selectable_item_background"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:text="Change Color"
+                        android:textColor="?attr/recycler_text_color" />
+
+                    <CheckBox
+                        android:id="@+id/check_dark_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_marginRight="@dimen/padding_large"
+                        android:buttonTint="?attr/recycler_text_color"
+                        android:foreground="@drawable/selectable_item_background"
+                        android:gravity="left|center"
+                        android:layoutDirection="rtl"
+                        android:checked="@{settingActivityViewModel.mIsDarkModeEnabled}"
+                        android:text="Dark Mode"
+                        android:textColor="?attr/recycler_text_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="@drawable/selectable_item_background"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:text="gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+                        android:textColor="?attr/recycler_text_color"
+                        android:textSize="100sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_main_color_transparent"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:elevation="0dp">
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blurToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:minHeight="0dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tool_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentInsetStartWithNavigation="0dp"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        app:theme="?attr/detail_toolbar_theme">
+
+                        <TextView
+                            android:id="@+id/text_song_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Settings"
+                            android:textColor="?attr/toolbar_text_color"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </eightbitlab.com.blurview.BlurView>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

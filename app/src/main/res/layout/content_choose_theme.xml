@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/main_background_color"
+        tools:context=".ui.screen.setting.ChooseThemeActivity">
+
+        <RadioGroup
+            android:id="@+id/radio_group_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_maroon_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Maroon"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_dark_red_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Dark Red"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_brown_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Brown"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_deep_sky_blue_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Deep Sky Blue"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_navy_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Navy"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_indigo_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_indigo_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Indigo"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_magenta_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_magenta_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Magenta"
+                android:textColor="?attr/recycler_text_color" />
+
+            <RadioButton
+                android:id="@+id/radio_black_theme"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/image_black_theme"
+                android:background="@color/transparent"
+                android:buttonTint="?attr/recycler_text_color"
+                android:foreground="@drawable/selectable_item_background"
+                android:paddingLeft="16dp"
+                android:text="Black"
+                android:textColor="?attr/recycler_text_color" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_maroon_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/maroon"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_dark_red_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/dark_red"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_brown_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/brown"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_deep_sky_blue_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/deep_sky_blue"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_navy_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/navy"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_indigo_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/indigo"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_magenta_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/magenta"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_black_theme"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/padding_small_plus_two"
+                android:src="@color/black"
+                app:civ_border_color="?attr/recycler_text_color"
+                app:civ_border_width="@dimen/padding_tiny" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
