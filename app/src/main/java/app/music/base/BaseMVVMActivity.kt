@@ -4,7 +4,7 @@ import androidx.databinding.ViewDataBinding
 
 
 abstract class BaseMVVMActivity<T : ViewDataBinding, VM : BaseViewModel>
-    : BaseActivity<T>(), BaseView {
+    : BaseActivity<T>() {
 
     protected lateinit var mViewModel: VM
 
