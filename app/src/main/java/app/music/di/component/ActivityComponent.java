@@ -3,8 +3,10 @@ package app.music.di.component;
 import android.app.Activity;
 
 import app.music.di.module.ActivityModule;
+import app.music.di.module.PresenterModule;
 import app.music.di.module.ViewModelModule;
 import app.music.di.scope.ActivityScope;
+import app.music.presenter.SettingActivityPresenter;
 import app.music.ui.screen.detailalbum.DetailAlbumActivity;
 import app.music.ui.screen.detailartist.DetailArtistActivity;
 import app.music.ui.screen.detailfavorite.DetailFavoriteActivity;
@@ -25,12 +27,17 @@ import app.music.viewmodel.SplashActivityViewModel;
 import dagger.Component;
 
 @ActivityScope
-@Component(dependencies = AppComponent.class, modules = {ActivityModule.class, ViewModelModule.class})
+@Component(
+        dependencies = AppComponent.class,
+        modules = {ActivityModule.class, ViewModelModule.class, PresenterModule.class}
+)
 public interface ActivityComponent {
 
     Activity getActivity();
 
     HomeActivityViewModel getHomeActivityViewModel();
+
+    SettingActivityPresenter getSettingActivityPresenter();
 
     SettingActivityViewModel getSettingActivityViewModel();
 

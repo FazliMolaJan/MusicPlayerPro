@@ -2,40 +2,38 @@ package app.music.viewmodel
 
 import android.content.Context
 import androidx.databinding.ObservableBoolean
-import app.music.base.BaseNormalViewModel
+import app.music.base.BaseMVVMPViewModel
 import app.music.base.contract.SettingActivityContract
-import app.music.ui.screen.setting.SettingActivity
-import app.music.utils.theme.ThemeConstantUtils
-import app.music.utils.theme.ThemeMethodUtils
-import java.lang.ref.WeakReference
+import app.music.presenter.SettingActivityPresenter
 
 
 class SettingActivityViewModel
-    : BaseNormalViewModel(),
+    : BaseMVVMPViewModel<SettingActivityPresenter>(),
         SettingActivityContract.ViewModel {
 
     override val mIsDarkModeEnabled = ObservableBoolean()
 
+    init {
+        mPresenter.attachViewModel(this)
+    }
+
+    override fun getPresenter() = SettingActivityPresenter()
+
+    override fun onCleared() {
+        super.onCleared()
+        mPresenter.detachViewModel()
+    }
+
+    override fun changeDarkMode(darkModeStatus: Boolean) {
+        mIsDarkModeEnabled.set(darkModeStatus)
+    }
+
     fun checkDarkMode(context: Context) {
-        mIsDarkModeEnabled.set(
-                with(ThemeConstantUtils) {
-                    when (ThemeMethodUtils.getCurrentThemeMode(WeakReference(context))) {
-                        PREF_DARK_MODE -> true
-                        PREF_LIGHT_MODE -> false
-                        else -> true
-                    }
-                }
-        )
+        mPresenter.checkDarkMode(context)
     }
 
     fun changeThemeMode(context: Context) {
-        mIsDarkModeEnabled.set(!mIsDarkModeEnabled.get())
-        ThemeMethodUtils.saveCurrentThemeMode(
-                WeakReference(context),
-                with(ThemeConstantUtils) {
-                    if (mIsDarkModeEnabled.get()) PREF_DARK_MODE
-                    else PREF_LIGHT_MODE
-                }
-        )
+        changeDarkMode(!mIsDarkModeEnabled.get())
+        mPresenter.saveCurrentThemeMode(context, mIsDarkModeEnabled.get())
     }
 }

@@ -3,7 +3,6 @@ package app.music.ui.screen.setting
 import android.view.Menu
 import app.music.R
 import app.music.base.BaseMVVMActivity
-import app.music.base.contract.SettingActivityContract
 import app.music.databinding.ActivitySettingBinding
 import app.music.utils.blur.DynamicBlurUtils
 import app.music.utils.intent.IntentMethodUtils
@@ -13,8 +12,7 @@ import kotlinx.android.synthetic.main.activity_setting.*
 
 
 class SettingActivity
-    : BaseMVVMActivity<ActivitySettingBinding, SettingActivityViewModel>(),
-        SettingActivityContract.View {
+    : BaseMVVMActivity<ActivitySettingBinding, SettingActivityViewModel>() {
 
     override fun getViewModel() = ViewModelUtils.getViewModel<SettingActivityViewModel>(this)
 
