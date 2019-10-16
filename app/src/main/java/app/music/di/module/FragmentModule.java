@@ -3,8 +3,9 @@ package app.music.di.module;
 import android.app.Activity;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
+
+import java.text.SimpleDateFormat;
 
 import app.music.di.scope.FragmentScope;
 import app.music.viewmodel.HomeActivityViewModel;
@@ -34,8 +35,14 @@ public class FragmentModule {
     }
 
     @Provides
-//    @FragmentScope
-    static HomeActivityViewModel provideHomeActivityViewModel(Activity activity) {
-        return ViewModelProviders.of((FragmentActivity) activity).get(HomeActivityViewModel.class);
+    @FragmentScope
+    public SimpleDateFormat provideSimpleDateFormat() {
+        return new SimpleDateFormat("mm:ss");
+    }
+
+    @Provides
+    @FragmentScope
+    static HomeActivityViewModel provideHomeActivityViewModel(Fragment fragment) {
+        return ViewModelProviders.of(fragment).get(HomeActivityViewModel.class);
     }
 }

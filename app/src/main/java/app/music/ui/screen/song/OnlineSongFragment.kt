@@ -38,8 +38,6 @@ class OnlineSongFragment
     private lateinit var mSongRecyclerAdapter: SongAdapter
     private var mHomeActivityViewModel: OnlineHomeActivityViewModel? = null
     private var mLastSearchingSong: String? = ""
-    override val layoutId = R.layout.fragment_song
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -77,6 +75,10 @@ class OnlineSongFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_song
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(binding.recyclerview, context!!, true)

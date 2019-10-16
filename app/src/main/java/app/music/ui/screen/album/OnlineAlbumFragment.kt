@@ -32,8 +32,6 @@ class OnlineAlbumFragment
     private lateinit var mAlbumRecyclerAdapter: AlbumAdapter
     private var mHomeActivityViewModel: OnlineHomeActivityViewModel? = null
     private var mLastSearchingAlbum: String? = null
-    override val layoutId = R.layout.fragment_album
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -72,6 +70,10 @@ class OnlineAlbumFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_album
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         binding.recyclerview.setHasFixedSize(true)

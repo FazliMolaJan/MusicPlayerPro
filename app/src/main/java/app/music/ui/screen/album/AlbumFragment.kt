@@ -5,7 +5,6 @@ import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import app.music.R
@@ -22,6 +21,7 @@ import app.music.utils.sort.SortMethodUtils
 import app.music.viewmodel.HomeActivityViewModel
 import timber.log.Timber
 import java.lang.ref.WeakReference
+import javax.inject.Inject
 
 class AlbumFragment
     : BaseFragment<FragmentAlbumBinding>(),
@@ -30,10 +30,9 @@ class AlbumFragment
         AlbumFragmentItemClickListener {
 
     private lateinit var mAlbumRecyclerAdapter: AlbumAdapter
-    var mHomeActivityViewModel: HomeActivityViewModel? = null
+    @Inject
+    lateinit var mHomeActivityViewModel: HomeActivityViewModel
     private var mLastSearchingAlbum: String? = null
-    override val layoutId = R.layout.fragment_album
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -42,20 +41,19 @@ class AlbumFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mHomeActivityViewModel = ViewModelProviders.of(activity!!).get(HomeActivityViewModel::class.java)
         mHomeActivityViewModel!!.mIsSearching.observe(
                 this,
                 Observer { searching ->
                     Timber.i("onCreate: searching changed")
                     if (mIsVisibleToUser) {
                         Timber.i("onCreate: searching changed and visible to user")
-                        if (searching != null && searching!!) {
+                        if (searching != null && searching) {
                             Timber.i("onCreate: searching changed and visible to user and searching")
-                            mAlbumRecyclerAdapter!!.filter.filter(mHomeActivityViewModel!!.getSearchingText())
+                            mAlbumRecyclerAdapter.filter.filter(mHomeActivityViewModel!!.getSearchingText())
                             Timber.i("onCreate: searching changed and visible to user and searching" + mHomeActivityViewModel!!.getSearchingText()!!)
                         } else {
                             Timber.i("onCreate: searching changed and visible to user and not searching")
-                            mAlbumRecyclerAdapter?.updateItems(false, LoadMusicUtil.sAlbumList)
+                            mAlbumRecyclerAdapter.updateItems(false, LoadMusicUtil.sAlbumList)
                         }
                     }
                 }
@@ -72,9 +70,13 @@ class AlbumFragment
         binding.recyclerview.adapter = null
     }
 
+    override fun getLayoutId() = R.layout.fragment_album
+
+    override fun getLogTag() = TAG
+
     override fun initInject() {
         super.initInject()
-        getFragmentComponent()?.inject(this)
+        fragmentComponent?.inject(this)
     }
 
     override fun initView() {
@@ -133,7 +135,7 @@ class AlbumFragment
             Timber.i("onVisible: not searching")
             if (mLastSearchingAlbum != null) {
                 Timber.i("onVisible: not searching and mLastSearchingAlbum != null")
-                mAlbumRecyclerAdapter?.updateItems(false, LoadMusicUtil.sAlbumList)
+                mAlbumRecyclerAdapter.updateItems(false, LoadMusicUtil.sAlbumList)
             }
         }
     }

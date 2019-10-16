@@ -30,8 +30,6 @@ class OnlineGenreFragment
     private lateinit var mGenreRecyclerAdapter: GenreAdapter
     private var mHomeActivityViewModel: OnlineHomeActivityViewModel? = null
     private var mLastSearchingGenre: String? = ""
-    override val layoutId = R.layout.fragment_genre
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -64,6 +62,10 @@ class OnlineGenreFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_genre
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(

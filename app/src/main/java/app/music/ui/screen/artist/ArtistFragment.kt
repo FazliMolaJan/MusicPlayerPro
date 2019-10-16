@@ -30,8 +30,6 @@ class ArtistFragment
     private lateinit var mArtistRecyclerAdapter: ArtistAdapter
     private var mHomeActivityViewModel: HomeActivityViewModel? = null
     private var mLastSearchingArtist: String? = ""
-    override val layoutId = R.layout.fragment_artist
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -64,6 +62,10 @@ class ArtistFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_artist
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(binding.recyclerview, context!!, true, true)

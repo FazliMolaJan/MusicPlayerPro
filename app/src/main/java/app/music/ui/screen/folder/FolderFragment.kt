@@ -30,8 +30,6 @@ class FolderFragment
     private lateinit var mFolderRecyclerAdapter: FolderAdapter
     private var mHomeActivityViewModel: HomeActivityViewModel? = null
     private var mLastSearchingFolder: String? = ""
-    override val layoutId = R.layout.fragment_folder
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -64,6 +62,10 @@ class FolderFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_folder
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(binding.recyclerview, context!!, true, true)

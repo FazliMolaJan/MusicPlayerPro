@@ -30,8 +30,6 @@ class OnlinePlaylistFragment
     private lateinit var mPlaylistRecyclerAdapter: OnlinePlaylistAdapter
     private var mHomeActivityViewModel: OnlineHomeActivityViewModel? = null
     private var mLastSearchingPlaylist: String? = ""
-    override val layoutId = R.layout.fragment_playlist
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -64,6 +62,10 @@ class OnlinePlaylistFragment
         super.onDestroy()
         binding.recyclerview.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_playlist
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(binding.recyclerview, context!!, true)

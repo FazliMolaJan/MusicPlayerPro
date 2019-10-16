@@ -32,8 +32,6 @@ class DetailArtistTrackFragment
 
     private var mArtist: Artist? = null
     private var mRecyclerAdapter: ArtistSongAdapter? = null
-    override val layoutId = R.layout.fragment_detail_artist_track
-    override val logTag = TAG
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -48,6 +46,10 @@ class DetailArtistTrackFragment
         super.onDestroy()
         binding.recycler.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_detail_artist_track
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         RecyclerViewUtils.setVerticalLinearLayout(binding.recycler, context!!, true)
