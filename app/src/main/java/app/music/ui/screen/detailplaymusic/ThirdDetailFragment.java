@@ -62,6 +62,6 @@ public class ThirdDetailFragment
 
     @Override
     public void updateLyrics(String lyrics) {
-        getBinding().textLyrics.setText(TextUtils.isEmpty(lyrics) ? getString(R.string.empty_string) : lyrics);
+        binding.textLyrics.setText(TextUtils.isEmpty(lyrics) ? getString(R.string.empty_string) : lyrics);
     }
 }

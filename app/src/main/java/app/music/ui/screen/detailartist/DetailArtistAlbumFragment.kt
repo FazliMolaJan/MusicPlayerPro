@@ -28,8 +28,6 @@ class DetailArtistAlbumFragment
         RecyclerScrollToTopListener,
         AlbumFragmentItemClickListener {
 
-    override val logTag: String = TAG
-    override val layoutId: Int = R.layout.fragment_detail_artist_album
     private var mArtist: Artist? = null
     private var mRecyclerAdapter: ArtistAlbumAdapter? = null
     private val albumList = ArrayList<Album>()
@@ -45,6 +43,10 @@ class DetailArtistAlbumFragment
         super.onDestroy()
         binding.recycler.adapter = null
     }
+
+    override fun getLayoutId() = R.layout.fragment_detail_artist_album
+
+    override fun getLogTag() = TAG
 
     override fun initView() {
         with(binding.recycler) {
