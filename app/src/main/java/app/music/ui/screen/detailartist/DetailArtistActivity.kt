@@ -10,9 +10,9 @@ import app.music.adapter.viewpager.DetailArtistPagerAdapter
 import app.music.base.BaseBottomProgressActivity
 import app.music.databinding.ActivityDetailArtistBinding
 import app.music.listener.itemclick.AlbumFragmentItemClickListener
-import app.music.model.Artist
-import app.music.model.BaseMusik
-import app.music.model.OnlineMusik
+import app.music.model.entity.Artist
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.utils.ConstantUtil
 import app.music.utils.DoubleClickUtils
 import app.music.utils.blur.DynamicBlurUtils

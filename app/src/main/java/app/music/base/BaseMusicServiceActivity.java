@@ -5,7 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
+
 import androidx.databinding.ViewDataBinding;
+
 import android.media.MediaMetadataRetriever;
 import android.os.Handler;
 import android.os.IBinder;
@@ -15,7 +17,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import app.music.model.BaseMusik;
+import app.music.model.entity.BaseMusik;
 import app.music.service.MusicService;
 
 public abstract class BaseMusicServiceActivity<T extends ViewDataBinding> extends BaseActivity<T> {

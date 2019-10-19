@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import app.music.base.ContainListViewModel
-import app.music.model.Folder
+import app.music.model.entity.Folder
 import app.music.ui.screen.home.HomeActivity
 import app.music.utils.DoubleClickUtils
 import app.music.utils.intent.IntentMethodUtils

@@ -6,7 +6,7 @@ import android.view.Menu;
 import java.util.List;
 
 import app.music.base.BaseSingleRecyclerActivity;
-import app.music.model.BaseMusik;
+import app.music.model.entity.BaseMusik;
 import app.music.utils.log.InformationLogUtils;
 import app.music.utils.musicloading.LoadMusicUtil;
 

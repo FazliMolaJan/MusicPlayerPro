@@ -1,4 +1,4 @@
-package app.music.model;
+package app.music.model.entity;
 
 import java.util.Calendar;
 

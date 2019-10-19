@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemHomeSixthFragmentBinding
-import app.music.model.Folder
+import app.music.model.entity.Folder
 import java.lang.ref.WeakReference
 
 class FolderViewHolder(

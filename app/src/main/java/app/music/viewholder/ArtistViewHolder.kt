@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemHomeThirdFragmentBinding
-import app.music.model.Artist
+import app.music.model.entity.Artist
 import java.lang.ref.WeakReference
 
 class ArtistViewHolder(

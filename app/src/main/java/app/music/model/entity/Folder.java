@@ -1,4 +1,4 @@
-package app.music.model;
+package app.music.model.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,22 +6,22 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Genre implements Parcelable {
+public class Folder implements Parcelable {
 
-    private String genre;
+    private String folderName;
     private List<BaseMusik> musicList;
 
-    public Genre(String genre, List<BaseMusik> musicList) {
-        this.genre = genre;
+    public Folder(String folderName, List<BaseMusik> musicList) {
+        this.folderName = folderName;
         this.musicList = musicList;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getFolderName() {
+        return folderName;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setFolderName(String folderName) {
+        this.folderName = folderName;
     }
 
     public List<BaseMusik> getMusicList() {
@@ -32,12 +32,8 @@ public class Genre implements Parcelable {
         this.musicList = musicList;
     }
 
-    public static Creator<Genre> getCREATOR() {
-        return CREATOR;
-    }
-
-    protected Genre(Parcel in) {
-        genre = in.readString();
+    protected Folder(Parcel in) {
+        folderName = in.readString();
         if (in.readByte() == 0x01) {
             musicList = new ArrayList<>();
             in.readList(musicList, BaseMusik.class.getClassLoader());
@@ -53,7 +49,7 @@ public class Genre implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(genre);
+        dest.writeString(folderName);
         if (musicList == null) {
             dest.writeByte((byte) (0x00));
         } else {
@@ -63,15 +59,15 @@ public class Genre implements Parcelable {
     }
 
     @SuppressWarnings("unused")
-    public static final Parcelable.Creator<Genre> CREATOR = new Parcelable.Creator<Genre>() {
+    public static final Parcelable.Creator<Folder> CREATOR = new Parcelable.Creator<Folder>() {
         @Override
-        public Genre createFromParcel(Parcel in) {
-            return new Genre(in);
+        public Folder createFromParcel(Parcel in) {
+            return new Folder(in);
         }
 
         @Override
-        public Genre[] newArray(int size) {
-            return new Genre[size];
+        public Folder[] newArray(int size) {
+            return new Folder[size];
         }
     };
 }

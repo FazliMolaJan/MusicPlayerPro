@@ -4,10 +4,7 @@ import android.content.Context
 import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import app.music.base.ContainListViewModel
-import app.music.model.Album
 import app.music.utils.DoubleClickUtils
-import app.music.utils.intent.IntentMethodUtils
-import app.music.utils.toast.ToastUtil
 import app.music.utils.viewmodel.ViewModelUtils
 
 interface BaseRecyclerItemClickListener {

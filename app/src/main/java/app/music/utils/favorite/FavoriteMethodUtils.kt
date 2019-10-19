@@ -3,9 +3,9 @@ package app.music.utils.favorite
 import android.content.Context
 import android.content.SharedPreferences
 import android.text.TextUtils
-import app.music.model.BaseMusik
-import app.music.model.Music
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.Music
+import app.music.model.entity.OnlineMusik
 import app.music.utils.ConstantUtil
 import app.music.utils.musicloading.LoadMusicUtil
 import app.music.utils.sharepreferences.SharedPrefMethodUtils

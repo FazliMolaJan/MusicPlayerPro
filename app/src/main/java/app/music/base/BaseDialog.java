@@ -2,14 +2,18 @@ package app.music.base;
 
 import android.app.Dialog;
 import android.content.Context;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Gravity;

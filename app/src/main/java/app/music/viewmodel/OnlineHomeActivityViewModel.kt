@@ -2,8 +2,8 @@ package app.music.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import app.music.adapter.DialogOnlinePlaylistAdapter
-import app.music.model.OnlineMusik
+import app.music.adapter.recycler.DialogOnlinePlaylistAdapter
+import app.music.model.entity.OnlineMusik
 
 class OnlineHomeActivityViewModel(application: Application) : BaseHomeActivityViewModel(application) {
 

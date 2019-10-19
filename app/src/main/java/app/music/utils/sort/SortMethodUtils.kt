@@ -37,7 +37,7 @@ import app.music.comparator.comparatordescending.playlist.onlineplaylist.OnlineP
 import app.music.comparator.comparatordescending.playlist.onlineplaylist.OnlinePlaylistComparatorByCreatedTimeDescending
 import app.music.comparator.comparatordescending.playlist.onlineplaylist.OnlinePlaylistComparatorByNumberOfSongsDescending
 import app.music.comparator.comparatordescending.song.*
-import app.music.model.*
+import app.music.model.entity.*
 import app.music.utils.musicloading.LoadMusicUtil
 import app.music.utils.sharepreferences.SharedPrefMethodUtils
 import io.reactivex.Observable
@@ -209,7 +209,7 @@ object SortMethodUtils {
     }
 
     fun sortOnlineGenreList(activity: Activity, sortBy: String, orderBy: String,
-                      updateItems: KFunction2<Boolean, MutableList<Genre>, Unit>) {
+                            updateItems: KFunction2<Boolean, MutableList<Genre>, Unit>) {
         sortMusicList(activity, sortBy, orderBy, this::sortGenreList,
                 { LoadMusicUtil.sOnlineGenreList }, updateItems)
     }
@@ -221,7 +221,7 @@ object SortMethodUtils {
     }
 
     fun sortOnlineArtistList(activity: Activity, sortBy: String, orderBy: String,
-                       updateItems: KFunction2<Boolean, MutableList<Artist>, Unit>) {
+                             updateItems: KFunction2<Boolean, MutableList<Artist>, Unit>) {
         sortMusicList(activity, sortBy, orderBy, this::sortArtistList,
                 { LoadMusicUtil.sOnlineArtistList }, updateItems)
     }

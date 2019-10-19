@@ -1,7 +1,7 @@
 package app.music.utils.dialog.songoption
 
 import app.music.listener.dialoglistener.DialogSongOptionListener
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 
 object DialogSongOptionMethodUtils {
 

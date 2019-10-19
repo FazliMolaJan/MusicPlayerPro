@@ -36,13 +36,13 @@ public abstract class BaseFragment<T extends ViewDataBinding> extends Fragment {
         mLogTag = getLogTag();
         InformationLogUtils.INSTANCE.logOnAttach(mLogTag);
         super.onAttach(context);
+        initInject();
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         InformationLogUtils.INSTANCE.logOnCreate(mLogTag);
         super.onCreate(savedInstanceState);
-        initInject();
     }
 
     @Nullable
@@ -148,9 +148,7 @@ public abstract class BaseFragment<T extends ViewDataBinding> extends Fragment {
         mIsVisibleToUser = false;
     }
 
-    protected void initInject() {
-
-    }
+    protected abstract void initInject();
 
     public abstract int getLayoutId();
 

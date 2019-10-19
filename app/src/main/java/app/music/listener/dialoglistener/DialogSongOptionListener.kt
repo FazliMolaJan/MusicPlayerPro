@@ -8,9 +8,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProviders
 import app.music.R
-import app.music.model.BaseMusik
-import app.music.model.Music
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.Music
+import app.music.model.entity.OnlineMusik
 import app.music.utils.ConstantUtil
 import app.music.utils.InflaterUtils
 import app.music.utils.dialog.BottomSheetDialogUtils

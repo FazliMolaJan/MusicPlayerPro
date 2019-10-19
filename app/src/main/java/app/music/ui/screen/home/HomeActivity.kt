@@ -17,16 +17,14 @@ import androidx.viewpager.widget.ViewPager
 import app.music.R
 import app.music.adapter.viewpager.HomePagerAdapter
 import app.music.base.BaseBottomProgressActivity
-import app.music.base.ContainListViewModel
 import app.music.databinding.ActivityHomeBinding
 import app.music.listener.ToolbarScrollFlagListener
 import app.music.listener.dialoglistener.DialogAddToPlaylistListener
 import app.music.listener.dialoglistener.DialogHomeItemSortListener
 import app.music.listener.dialoglistener.DialogSongOptionListener
 import app.music.listener.homefragmentlistener.*
-import app.music.model.BaseMusik
-import app.music.model.Folder
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.ui.screen.equalizer.EqualizerActivity
 import app.music.ui.screen.setting.SettingActivity
 import app.music.utils.ConstantUtil
@@ -39,9 +37,6 @@ import app.music.utils.imageloading.ImageLoadingUtils
 import app.music.utils.intent.IntentMethodUtils
 import app.music.utils.log.InformationLogUtils
 import app.music.utils.musicloading.LoadMusicUtil
-import app.music.utils.snackbar.SnackbarUtils
-import app.music.utils.toast.ToastUtil
-import app.music.utils.viewmodel.ViewModelUtils
 import app.music.viewmodel.HomeActivityViewModel
 import br.com.mauker.materialsearchview.MaterialSearchView
 import com.bumptech.glide.request.RequestOptions
@@ -101,11 +96,21 @@ class HomeActivity : BaseBottomProgressActivity<ActivityHomeBinding>(),
                 if (DoubleClickUtils.isDoubleClick(mNavigationItemLastReselectedTime)) {
                     setPinToolbar()
                     when (menuItem.itemId) {
-                        R.id.navigation_album -> mAlbumFragmentListener!!.onScrollToTop()
-                        R.id.navigation_song -> mSongFragmentListener!!.onScrollToTop()
-                        R.id.navigation_artist -> mArtistFragmentListener!!.onScrollToTop()
-                        R.id.navigation_genre -> mGenreFragmentListener!!.onScrollToTop()
-                        R.id.navigation_playlist -> mPlaylistFragmentListener!!.onScrollToTop()
+                        R.id.navigation_album -> {
+                            (mAlbumFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_song -> {
+                            (mSongFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_artist -> {
+                            (mArtistFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_genre -> {
+                            (mGenreFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_playlist -> {
+                            (mPlaylistFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
                     }
                 }
                 mNavigationItemLastReselectedTime = SystemClock.elapsedRealtime()

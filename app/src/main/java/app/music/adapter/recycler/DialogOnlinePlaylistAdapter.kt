@@ -1,4 +1,4 @@
-package app.music.adapter
+package app.music.adapter.recycler
 
 import android.app.Activity
 import androidx.databinding.ViewDataBinding
@@ -7,7 +7,7 @@ import app.music.R
 import app.music.base.BaseRecyclerAdapter
 import app.music.databinding.ItemDialogOnlinePlaylistBinding
 import app.music.diffcallback.DialogOnlinePlaylistDiffCallBack
-import app.music.model.OnlinePlaylist
+import app.music.model.entity.OnlinePlaylist
 import app.music.viewholder.DialogOnlinePlaylistViewHolder
 import java.lang.ref.WeakReference
 

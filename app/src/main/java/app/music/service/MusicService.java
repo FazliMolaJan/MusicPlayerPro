@@ -39,8 +39,8 @@ import java.util.List;
 import java.util.Random;
 
 import app.music.R;
-import app.music.model.BaseMusik;
-import app.music.model.OnlineMusik;
+import app.music.model.entity.BaseMusik;
+import app.music.model.entity.OnlineMusik;
 import app.music.ui.screen.detailplaymusic.DetailPlayMusicActivity;
 import app.music.utils.ConstantUtil;
 import app.music.utils.log.InformationLogUtils;

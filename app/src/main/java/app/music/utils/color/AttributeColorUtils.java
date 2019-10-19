@@ -2,7 +2,9 @@ package app.music.utils.color;
 
 import android.content.Context;
 import android.content.res.Resources;
+
 import androidx.annotation.ColorInt;
+
 import android.util.TypedValue;
 
 public class AttributeColorUtils {

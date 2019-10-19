@@ -1,6 +1,6 @@
 package app.music.listener
 
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 
 interface SongItemClickListener {
     fun <MusicType : BaseMusik> onSongClick(

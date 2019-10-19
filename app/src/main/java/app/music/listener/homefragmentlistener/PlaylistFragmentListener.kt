@@ -1,7 +1,5 @@
 package app.music.listener.homefragmentlistener
 
-import app.music.listener.RecyclerScrollToTopListener
-
-interface PlaylistFragmentListener : RecyclerScrollToTopListener {
+interface PlaylistFragmentListener {
     fun onSortPlaylist(sortBy: String, isAscending: String)
 }

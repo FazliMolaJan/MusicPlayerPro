@@ -1,6 +1,6 @@
 package app.music.network
 
-import app.music.model.OnlineMusik
+import app.music.model.entity.OnlineMusik
 import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.GET

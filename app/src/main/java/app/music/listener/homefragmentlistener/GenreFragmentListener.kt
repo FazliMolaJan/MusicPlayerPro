@@ -1,7 +1,5 @@
 package app.music.listener.homefragmentlistener
 
-import app.music.listener.RecyclerScrollToTopListener
-
-interface GenreFragmentListener : RecyclerScrollToTopListener {
+interface GenreFragmentListener {
     fun onSortGenre(sortBy: String, isAscending: String)
 }

@@ -1,27 +1,16 @@
 package app.music.utils.imageloading
 
-import android.app.Activity
 import android.graphics.Bitmap
-import android.graphics.drawable.Drawable
 import android.media.MediaMetadataRetriever
 import android.text.TextUtils
 import android.widget.ImageView
 import app.music.R
-import app.music.model.BaseMusik
-import app.music.model.OnlineMusik
-import app.music.utils.BitmapUtils
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.utils.ConstantUtil
-import app.music.utils.blur.BlurImageUtils
 import coil.api.load
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.transition.Transition
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.subscribeBy
-import io.reactivex.schedulers.Schedulers
 
 object ImageLoadingUtils {
 

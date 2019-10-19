@@ -2,7 +2,9 @@ package app.music.ui.widget.toolbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import androidx.databinding.DataBindingUtil;
+
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;

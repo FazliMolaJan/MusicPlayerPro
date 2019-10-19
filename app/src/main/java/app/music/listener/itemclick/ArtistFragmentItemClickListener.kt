@@ -3,7 +3,7 @@ package app.music.listener.itemclick
 import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import app.music.base.ContainListViewModel
-import app.music.model.Artist
+import app.music.model.entity.Artist
 import app.music.utils.DoubleClickUtils
 import app.music.utils.intent.IntentMethodUtils
 import app.music.utils.toast.ToastUtil

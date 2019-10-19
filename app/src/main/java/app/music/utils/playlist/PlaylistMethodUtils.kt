@@ -2,7 +2,7 @@ package app.music.utils.playlist
 
 import android.content.Context
 import android.content.SharedPreferences
-import app.music.model.*
+import app.music.model.entity.*
 import app.music.utils.sharepreferences.SharedPrefMethodUtils
 import com.google.gson.Gson
 import java.lang.ref.WeakReference

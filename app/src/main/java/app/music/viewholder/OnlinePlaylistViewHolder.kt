@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemOnlineHomeFifthFragmentBinding
-import app.music.model.OnlinePlaylist
+import app.music.model.entity.OnlinePlaylist
 import app.music.utils.imageloading.ImageLoadingUtils
 import com.bumptech.glide.request.RequestOptions
 import java.lang.ref.WeakReference

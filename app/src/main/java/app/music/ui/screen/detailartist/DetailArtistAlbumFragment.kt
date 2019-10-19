@@ -6,14 +6,14 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import app.music.R
-import app.music.adapter.ArtistAlbumAdapter
+import app.music.adapter.recycler.ArtistAlbumAdapter
 import app.music.base.BaseFragment
 import app.music.comparator.comparatorascending.album.AlbumComparatorByAlphabetAscending
 import app.music.databinding.FragmentDetailArtistAlbumBinding
 import app.music.listener.itemclick.AlbumFragmentItemClickListener
 import app.music.listener.RecyclerScrollToTopListener
-import app.music.model.Album
-import app.music.model.Artist
+import app.music.model.entity.Album
+import app.music.model.entity.Artist
 import app.music.utils.ConstantUtil
 import app.music.utils.musicloading.LoadMusicUtil
 import java.lang.ref.WeakReference
@@ -42,6 +42,10 @@ class DetailArtistAlbumFragment
     override fun onDestroy() {
         super.onDestroy()
         binding.recycler.adapter = null
+    }
+
+    override fun initInject() {
+
     }
 
     override fun getLayoutId() = R.layout.fragment_detail_artist_album

@@ -2,15 +2,11 @@ package app.music.viewholder
 
 import android.app.Activity
 import android.content.Context
-import android.view.View
 import androidx.databinding.ObservableField
-import androidx.recyclerview.widget.RecyclerView
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemHomeSecondFragmentBinding
-import app.music.listener.dialoglistener.DialogSongOptionListener
-import app.music.model.BaseMusik
-import app.music.utils.dialog.songoption.DialogSongOptionMethodUtils
+import app.music.model.entity.BaseMusik
 import app.music.utils.imageloading.ImageLoadingUtils
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_home_second_fragment.view.*

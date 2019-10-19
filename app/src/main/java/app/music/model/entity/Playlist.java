@@ -1,4 +1,4 @@
-package app.music.model;
+package app.music.model.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,20 +7,20 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class OnlinePlaylist implements Parcelable {
+public class Playlist implements Parcelable {
 
     private Calendar mCreatedTime;
     private String playlistName;
-    private List<OnlineMusik> musicList;
+    private List<BaseMusik> musicList;
     private String accentColorMode;
-    private OnlineMusik thumbnailSong;
-    private OnlineMusik newestSong;
+    private BaseMusik thumbnailSong;
+    private BaseMusik newestSong;
     private String accentColor;
     private boolean isOnlinePlaylist;
 
-    public OnlinePlaylist(Calendar mCreatedTime, String playlistName, List<OnlineMusik> musicList,
-                          String accentColorMode, OnlineMusik thumbnailSong, OnlineMusik newestSong,
-                          String accentColor, boolean isOnlinePlaylist) {
+    public Playlist(Calendar mCreatedTime, String playlistName, List<BaseMusik> musicList,
+                    String accentColorMode, BaseMusik thumbnailSong, BaseMusik newestSong,
+                    String accentColor, boolean isOnlinePlaylist) {
         this.mCreatedTime = mCreatedTime;
         this.playlistName = playlistName;
         this.musicList = musicList;
@@ -47,11 +47,11 @@ public class OnlinePlaylist implements Parcelable {
         this.playlistName = playlistName;
     }
 
-    public List<OnlineMusik> getMusicList() {
+    public List<BaseMusik> getMusicList() {
         return musicList;
     }
 
-    public void setMusicList(List<OnlineMusik> musicList) {
+    public void setMusicList(List<BaseMusik> musicList) {
         this.musicList = musicList;
     }
 
@@ -63,19 +63,19 @@ public class OnlinePlaylist implements Parcelable {
         this.accentColorMode = accentColorMode;
     }
 
-    public OnlineMusik getThumbnailSong() {
+    public BaseMusik getThumbnailSong() {
         return thumbnailSong;
     }
 
-    public void setThumbnailSong(OnlineMusik thumbnailSong) {
+    public void setThumbnailSong(BaseMusik thumbnailSong) {
         this.thumbnailSong = thumbnailSong;
     }
 
-    public OnlineMusik getNewestSong() {
+    public BaseMusik getNewestSong() {
         return newestSong;
     }
 
-    public void setNewestSong(OnlineMusik newestSong) {
+    public void setNewestSong(BaseMusik newestSong) {
         this.newestSong = newestSong;
     }
 
@@ -95,18 +95,18 @@ public class OnlinePlaylist implements Parcelable {
         isOnlinePlaylist = onlinePlaylist;
     }
 
-    protected OnlinePlaylist(Parcel in) {
+    protected Playlist(Parcel in) {
         mCreatedTime = (Calendar) in.readValue(Calendar.class.getClassLoader());
         playlistName = in.readString();
         if (in.readByte() == 0x01) {
-            musicList = new ArrayList<OnlineMusik>();
-            in.readList(musicList, OnlineMusik.class.getClassLoader());
+            musicList = new ArrayList<BaseMusik>();
+            in.readList(musicList, BaseMusik.class.getClassLoader());
         } else {
             musicList = null;
         }
         accentColorMode = in.readString();
-        thumbnailSong = (OnlineMusik) in.readValue(OnlineMusik.class.getClassLoader());
-        newestSong = (OnlineMusik) in.readValue(OnlineMusik.class.getClassLoader());
+        thumbnailSong = (BaseMusik) in.readValue(BaseMusik.class.getClassLoader());
+        newestSong = (BaseMusik) in.readValue(BaseMusik.class.getClassLoader());
         accentColor = in.readString();
         isOnlinePlaylist = in.readByte() != 0x00;
     }
@@ -134,15 +134,15 @@ public class OnlinePlaylist implements Parcelable {
     }
 
     @SuppressWarnings("unused")
-    public static final Creator<OnlinePlaylist> CREATOR = new Creator<OnlinePlaylist>() {
+    public static final Parcelable.Creator<Playlist> CREATOR = new Parcelable.Creator<Playlist>() {
         @Override
-        public OnlinePlaylist createFromParcel(Parcel in) {
-            return new OnlinePlaylist(in);
+        public Playlist createFromParcel(Parcel in) {
+            return new Playlist(in);
         }
 
         @Override
-        public OnlinePlaylist[] newArray(int size) {
-            return new OnlinePlaylist[size];
+        public Playlist[] newArray(int size) {
+            return new Playlist[size];
         }
     };
 }

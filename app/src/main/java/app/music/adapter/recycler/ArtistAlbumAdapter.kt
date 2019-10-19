@@ -1,4 +1,4 @@
-package app.music.adapter
+package app.music.adapter.recycler
 
 import android.app.Activity
 import androidx.databinding.ViewDataBinding
@@ -7,7 +7,7 @@ import app.music.R
 import app.music.base.BaseRecyclerAdapter
 import app.music.databinding.ItemArtistFirstFragmentBinding
 import app.music.diffcallback.AlbumDiffCallBack
-import app.music.model.Album
+import app.music.model.entity.Album
 import app.music.viewholder.ArtistAlbumViewHolder
 import java.lang.ref.WeakReference
 

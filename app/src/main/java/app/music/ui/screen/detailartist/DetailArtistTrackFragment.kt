@@ -7,15 +7,15 @@ import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import app.music.R
-import app.music.adapter.ArtistSongAdapter
+import app.music.adapter.recycler.ArtistSongAdapter
 import app.music.base.BaseFragment
 import app.music.base.ContainListViewModel
 import app.music.comparator.comparatorascending.song.SongComparatorByAlphabetAscending
 import app.music.databinding.FragmentDetailArtistTrackBinding
 import app.music.listener.RecyclerScrollToTopListener
 import app.music.listener.dialoglistener.DialogSongOptionListener
-import app.music.model.Artist
-import app.music.model.BaseMusik
+import app.music.model.entity.Artist
+import app.music.model.entity.BaseMusik
 import app.music.utils.DoubleClickUtils
 import app.music.utils.dialog.songoption.DialogSongOptionMethodUtils
 import app.music.utils.recyclerview.RecyclerViewUtils
@@ -45,6 +45,10 @@ class DetailArtistTrackFragment
     override fun onDestroy() {
         super.onDestroy()
         binding.recycler.adapter = null
+    }
+
+    override fun initInject() {
+
     }
 
     override fun getLayoutId() = R.layout.fragment_detail_artist_track

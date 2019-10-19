@@ -1,6 +1,6 @@
 package app.music.comparator.comparatorascending.playlist.offlineplaylist
 
-import app.music.model.Playlist
+import app.music.model.entity.Playlist
 import java.util.*
 
 class PlaylistComparatorByAlphabetAscending : Comparator<Playlist> {

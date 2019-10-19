@@ -1,7 +1,9 @@
 package app.music.ui.widget;
 
 import android.content.Context;
+
 import androidx.databinding.ViewDataBinding;
+
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
