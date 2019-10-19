@@ -9,7 +9,7 @@ import dagger.Provides;
 public class HandlerModule {
 
     @Provides
-    static Handler provideHandler(){
+    static Handler provideHandler() {
         return new Handler();
     }
 }

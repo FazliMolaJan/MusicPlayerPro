@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemHomeFourthFragmentBinding
-import app.music.model.Genre
+import app.music.model.entity.Genre
 import java.lang.ref.WeakReference
 
 class GenreViewHolder(

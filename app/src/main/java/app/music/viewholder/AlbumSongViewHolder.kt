@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemMusicListBinding
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 import java.lang.ref.WeakReference
 import java.text.SimpleDateFormat
 

@@ -3,7 +3,7 @@ package app.music.utils.intent
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import app.music.model.*
+import app.music.model.entity.*
 import app.music.ui.screen.detailalbum.DetailAlbumActivity
 import app.music.ui.screen.detailartist.DetailArtistActivity
 import app.music.ui.screen.detailfavorite.DetailFavoriteActivity

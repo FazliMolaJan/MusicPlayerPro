@@ -1,6 +1,6 @@
 package app.music.comparator.comparatorascending.song
 
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 import java.util.*
 
 class SongComparatorByAlbumAscending : Comparator<BaseMusik> {

@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
 import android.media.MediaMetadataRetriever;
 import android.os.AsyncTask;
+
 import androidx.viewpager.widget.ViewPager;
 import androidx.palette.graphics.Palette;
 
@@ -19,10 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.music.R;
-import app.music.model.BaseMusik;
-import app.music.model.Music;
-import app.music.model.Playlist;
-import app.music.model.PlaylistContainer;
+import app.music.model.entity.BaseMusik;
+import app.music.model.entity.Music;
+import app.music.model.entity.Playlist;
+import app.music.model.entity.PlaylistContainer;
 import app.music.utils.playlist.PlaylistConstantUtils;
 import app.music.utils.toast.ToastUtil;
 

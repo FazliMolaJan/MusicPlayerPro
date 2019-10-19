@@ -9,11 +9,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import app.music.R
-import app.music.adapter.DialogOnlinePlaylistAdapter
-import app.music.adapter.DialogPlaylistAdapter
-import app.music.model.BaseMusik
-import app.music.model.OnlinePlaylist
-import app.music.model.Playlist
+import app.music.adapter.recycler.DialogOnlinePlaylistAdapter
+import app.music.adapter.recycler.DialogPlaylistAdapter
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlinePlaylist
+import app.music.model.entity.Playlist
 import app.music.utils.ConstantUtil
 import app.music.utils.InflaterUtils
 import app.music.utils.dialog.BottomSheetDialogUtils

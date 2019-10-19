@@ -7,8 +7,8 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.MediaController
 import app.music.R
-import app.music.model.BaseMusik
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.utils.intent.IntentConstantUtils
 import kotlinx.android.synthetic.main.activity_detail_play_mv.*
 

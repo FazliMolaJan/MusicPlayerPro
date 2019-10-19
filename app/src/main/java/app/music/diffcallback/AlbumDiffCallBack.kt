@@ -1,7 +1,7 @@
 package app.music.diffcallback
 
 import app.music.base.BaseDiffCallBack
-import app.music.model.Album
+import app.music.model.entity.Album
 
 class AlbumDiffCallBack(oldList: List<Album>, newList: List<Album>)
     : BaseDiffCallBack<Album>(oldList, newList) {

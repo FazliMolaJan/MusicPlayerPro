@@ -2,15 +2,19 @@ package app.music.base;
 
 import android.app.Activity;
 import android.content.Intent;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.os.StrictMode;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.Menu;
 
 import java.lang.ref.WeakReference;

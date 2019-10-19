@@ -1,6 +1,6 @@
 package app.music.comparator.comparatorascending.folder
 
-import app.music.model.Folder
+import app.music.model.entity.Folder
 import java.util.*
 
 class FolderComparatorByNumberOfSongsAscending : Comparator<Folder> {

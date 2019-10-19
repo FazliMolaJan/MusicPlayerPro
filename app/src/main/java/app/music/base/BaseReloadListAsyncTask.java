@@ -2,8 +2,10 @@ package app.music.base;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+
 import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.util.Log;
 
 import java.io.IOException;
@@ -13,7 +15,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import app.music.model.OnlineMusik;
+import app.music.model.entity.OnlineMusik;
 import app.music.network.APIUtils;
 import app.music.utils.ListUtils;
 import app.music.utils.musicloading.LoadMusicUtil;

@@ -38,6 +38,11 @@ public class SecondDetailFragment
     }
 
     @Override
+    protected void initInject() {
+
+    }
+
+    @Override
     public int getLayoutId() {
         return R.layout.fragment_second_detail;
     }

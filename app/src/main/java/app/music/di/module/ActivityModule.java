@@ -26,16 +26,4 @@ public class ActivityModule {
     public Activity provideActivity() {
         return mActivity;
     }
-
-//    @Provides
-//    @ActivityScope
-//    static HomeActivityViewModel provideHomeActivityViewModel(Activity activity) {
-//        return ViewModelProviders.of((FragmentActivity) activity).get(HomeActivityViewModel.class);
-//    }
-//
-//    @Provides
-//    @ActivityScope
-//    static OnlineHomeActivityViewModel provideOnlineHomeActivityViewModel(Activity activity) {
-//        return ViewModelProviders.of((FragmentActivity) activity).get(OnlineHomeActivityViewModel.class);
-//    }
 }

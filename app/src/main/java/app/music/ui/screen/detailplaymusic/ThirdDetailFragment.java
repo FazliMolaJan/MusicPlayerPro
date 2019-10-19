@@ -41,6 +41,11 @@ public class ThirdDetailFragment
     }
 
     @Override
+    protected void initInject() {
+
+    }
+
+    @Override
     public int getLayoutId() {
         return R.layout.fragment_third_detail;
     }

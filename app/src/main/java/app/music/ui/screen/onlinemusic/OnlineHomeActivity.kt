@@ -23,9 +23,10 @@ import app.music.listener.dialoglistener.DialogAddToPlaylistListener
 import app.music.listener.dialoglistener.DialogHomeItemSortListener
 import app.music.listener.dialoglistener.DialogSongOptionListener
 import app.music.listener.homefragmentlistener.*
-import app.music.model.BaseMusik
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.ui.screen.equalizer.EqualizerActivity
+import app.music.ui.screen.home.BaseHomeFragment
 import app.music.ui.screen.setting.SettingActivity
 import app.music.utils.ConstantUtil
 import app.music.utils.DoubleClickUtils
@@ -98,11 +99,21 @@ class OnlineHomeActivity : BaseBottomProgressActivity<ActivityOnlineHomeBinding>
                 if (DoubleClickUtils.isDoubleClick(mNavigationItemLastReselectedTime)) {
                     setPinToolbar()
                     when (menuItem.itemId) {
-                        R.id.navigation_album -> mAlbumFragmentListener!!.onScrollToTop()
-                        R.id.navigation_song -> mSongFragmentListener!!.onScrollToTop()
-                        R.id.navigation_artist -> mArtistFragmentListener!!.onScrollToTop()
-                        R.id.navigation_genre -> mGenreFragmentListener!!.onScrollToTop()
-                        R.id.navigation_playlist -> mPlaylistFragmentListener!!.onScrollToTop()
+                        R.id.navigation_album -> {
+                            (mAlbumFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_song -> {
+                            (mSongFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_artist -> {
+                            (mArtistFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_genre -> {
+                            (mGenreFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
+                        R.id.navigation_playlist -> {
+                            (mPlaylistFragmentListener!! as BaseHomeFragment<*, *, *, *, *>).onScrollToTop()
+                        }
                     }
                 }
                 mNavigationItemLastReselectedTime = SystemClock.elapsedRealtime()

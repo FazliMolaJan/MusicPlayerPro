@@ -4,9 +4,9 @@ import android.app.Activity
 import android.content.Context
 import android.util.Log
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import app.music.adapter.*
+import app.music.adapter.recycler.*
 import app.music.base.BaseActivity
-import app.music.model.*
+import app.music.model.entity.*
 import app.music.network.APIUtils
 import app.music.utils.ListUtils
 import app.music.utils.sort.SortMethodUtils

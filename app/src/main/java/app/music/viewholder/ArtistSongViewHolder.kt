@@ -3,14 +3,10 @@ package app.music.viewholder
 import android.app.Activity
 import android.content.Context
 import androidx.databinding.ObservableField
-import androidx.recyclerview.widget.RecyclerView
-import android.text.TextUtils
-import android.view.View
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemArtistSecondFragmentBinding
-import app.music.listener.SongItemClickListener
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 import app.music.utils.imageloading.ImageLoadingUtils
 import com.bumptech.glide.request.RequestOptions
 import java.lang.ref.WeakReference

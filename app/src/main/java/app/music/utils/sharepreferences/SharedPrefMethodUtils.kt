@@ -3,8 +3,8 @@ package app.music.utils.sharepreferences
 import android.content.Context
 import android.content.SharedPreferences
 import android.text.TextUtils
-import app.music.model.OnlinePlaylistContainer
-import app.music.model.PlaylistContainer
+import app.music.model.entity.OnlinePlaylistContainer
+import app.music.model.entity.PlaylistContainer
 import com.google.gson.Gson
 import java.lang.ref.WeakReference
 import java.text.SimpleDateFormat

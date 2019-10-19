@@ -1,4 +1,4 @@
-package app.music.model;
+package app.music.model.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,22 +6,22 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Folder implements Parcelable {
+public class Album implements Parcelable {
 
-    private String folderName;
+    private String albumName;
     private List<BaseMusik> musicList;
 
-    public Folder(String folderName, List<BaseMusik> musicList) {
-        this.folderName = folderName;
+    public Album(String albumName, List<BaseMusik> musicList) {
+        this.albumName = albumName;
         this.musicList = musicList;
     }
 
-    public String getFolderName() {
-        return folderName;
+    public String getAlbumName() {
+        return albumName;
     }
 
-    public void setFolderName(String folderName) {
-        this.folderName = folderName;
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
     }
 
     public List<BaseMusik> getMusicList() {
@@ -32,8 +32,8 @@ public class Folder implements Parcelable {
         this.musicList = musicList;
     }
 
-    protected Folder(Parcel in) {
-        folderName = in.readString();
+    protected Album(Parcel in) {
+        albumName = in.readString();
         if (in.readByte() == 0x01) {
             musicList = new ArrayList<>();
             in.readList(musicList, BaseMusik.class.getClassLoader());
@@ -49,7 +49,7 @@ public class Folder implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(folderName);
+        dest.writeString(albumName);
         if (musicList == null) {
             dest.writeByte((byte) (0x00));
         } else {
@@ -59,15 +59,15 @@ public class Folder implements Parcelable {
     }
 
     @SuppressWarnings("unused")
-    public static final Parcelable.Creator<Folder> CREATOR = new Parcelable.Creator<Folder>() {
+    public static final Parcelable.Creator<Album> CREATOR = new Parcelable.Creator<Album>() {
         @Override
-        public Folder createFromParcel(Parcel in) {
-            return new Folder(in);
+        public Album createFromParcel(Parcel in) {
+            return new Album(in);
         }
 
         @Override
-        public Folder[] newArray(int size) {
-            return new Folder[size];
+        public Album[] newArray(int size) {
+            return new Album[size];
         }
     };
 }

@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import app.music.utils.toast.ToastUtil
 
-open class ContainListViewModel (application: Application) : AndroidViewModel(application) {
+open class ContainListViewModel(application: Application) : AndroidViewModel(application) {
 
     private var mItemLastClickTime = MutableLiveData<Long>()
 

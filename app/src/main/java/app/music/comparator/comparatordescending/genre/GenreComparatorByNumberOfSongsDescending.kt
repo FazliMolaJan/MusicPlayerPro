@@ -1,6 +1,6 @@
 package app.music.comparator.comparatordescending.genre
 
-import app.music.model.Genre
+import app.music.model.entity.Genre
 import java.util.*
 
 class GenreComparatorByNumberOfSongsDescending : Comparator<Genre> {

@@ -1,6 +1,6 @@
 package app.music.utils
 
-import app.music.model.BaseMusik
+import app.music.model.entity.BaseMusik
 import kotlin.reflect.KProperty
 
 object TestLambda {

@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.SystemClock
 import android.text.TextUtils
 import app.music.R
-import app.music.adapter.AlbumSongAdapter
+import app.music.adapter.recycler.AlbumSongAdapter
 import app.music.databinding.ActivityDetailAlbumBinding
-import app.music.model.BaseMusik
-import app.music.model.OnlineMusik
+import app.music.model.entity.BaseMusik
+import app.music.model.entity.OnlineMusik
 import app.music.utils.ConstantUtil
 import app.music.utils.DoubleClickUtils
 import app.music.utils.gradient.GradientBackgroundUtils

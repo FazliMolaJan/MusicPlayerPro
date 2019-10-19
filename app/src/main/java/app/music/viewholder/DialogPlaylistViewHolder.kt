@@ -6,7 +6,7 @@ import androidx.databinding.ObservableField
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemDialogPlaylistBinding
-import app.music.model.Playlist
+import app.music.model.entity.Playlist
 import java.lang.ref.WeakReference
 
 class DialogPlaylistViewHolder(

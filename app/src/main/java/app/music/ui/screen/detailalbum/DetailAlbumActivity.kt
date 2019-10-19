@@ -4,8 +4,8 @@ import android.content.Intent
 import android.view.Menu
 import app.music.R
 import app.music.base.BaseSingleRecyclerActivity
-import app.music.model.Album
-import app.music.model.BaseMusik
+import app.music.model.entity.Album
+import app.music.model.entity.BaseMusik
 import app.music.utils.intent.IntentConstantUtils
 import app.music.utils.log.InformationLogUtils
 

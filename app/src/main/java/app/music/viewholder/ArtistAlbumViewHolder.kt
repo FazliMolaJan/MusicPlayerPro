@@ -7,7 +7,7 @@ import android.text.TextUtils
 import app.music.R
 import app.music.base.BaseViewHolder
 import app.music.databinding.ItemArtistFirstFragmentBinding
-import app.music.model.Album
+import app.music.model.entity.Album
 import app.music.utils.imageloading.ImageLoadingUtils
 import com.bumptech.glide.request.RequestOptions
 import java.lang.ref.WeakReference
