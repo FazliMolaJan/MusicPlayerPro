@@ -5,26 +5,22 @@ import androidx.databinding.ObservableBoolean
 import app.music.base.BaseMVVMPViewModel
 import app.music.base.contract.SettingActivityContract
 import app.music.presenter.SettingActivityPresenter
+import javax.inject.Inject
 
 
-class SettingActivityViewModel
-    : BaseMVVMPViewModel<SettingActivityPresenter>(),
+class SettingActivityViewModel @Inject constructor(
+        settingActivityPresenter: SettingActivityPresenter)
+    : BaseMVVMPViewModel<SettingActivityViewModel, SettingActivityPresenter>(
+        settingActivityPresenter),
         SettingActivityContract.ViewModel {
-
-    override val mIsDarkModeEnabled = ObservableBoolean()
 
     init {
         mPresenter.attachViewModel(this)
     }
 
-    override fun getPresenter() = SettingActivityPresenter()
+    override val mIsDarkModeEnabled = ObservableBoolean()
 
-    override fun onCleared() {
-        super.onCleared()
-        mPresenter.detachViewModel()
-    }
-
-    override fun changeDarkMode(darkModeStatus: Boolean) {
+    override fun setDarkModeEnabledState(darkModeStatus: Boolean) {
         mIsDarkModeEnabled.set(darkModeStatus)
     }
 
@@ -33,7 +29,7 @@ class SettingActivityViewModel
     }
 
     fun changeThemeMode(context: Context) {
-        changeDarkMode(!mIsDarkModeEnabled.get())
+        setDarkModeEnabledState(!mIsDarkModeEnabled.get())
         mPresenter.saveCurrentThemeMode(context, mIsDarkModeEnabled.get())
     }
 }

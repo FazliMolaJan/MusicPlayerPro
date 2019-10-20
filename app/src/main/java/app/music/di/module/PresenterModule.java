@@ -8,9 +8,9 @@ import dagger.Provides;
 @Module
 public class PresenterModule {
 
-    @Provides
-    @ActivityScope
-    public SettingActivityPresenter provideSettingActivityPresenter() {
-        return new SettingActivityPresenter();
-    }
+//    @Provides
+//    @ActivityScope
+//    public SettingActivityPresenter provideSettingActivityPresenter() {
+//        return new SettingActivityPresenter();
+//    }
 }
