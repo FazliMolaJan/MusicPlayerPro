@@ -79,9 +79,9 @@ object ThemeMethodUtils {
         }
     }
 
-    fun getCurrentBaseThemeName(contextReference: WeakReference<Context>): String? {
+    fun getCurrentBaseThemeName(contextReference: WeakReference<Context>): String {
         val sharedPreferences = SharedPrefMethodUtils.getSharedPreferences(contextReference)
         return sharedPreferences.getString(ThemeConstantUtils.PREF_BASE_THEME_NAME,
-                ThemeConstantUtils.PREF_BASE_THEME_MAGENTA)
+                ThemeConstantUtils.PREF_BASE_THEME_MAGENTA).toString()
     }
 }

@@ -2,19 +2,18 @@ package app.music.ui.screen.setting
 
 import android.view.Menu
 import app.music.R
-import app.music.base.BaseMVVMActivity
+import app.music.base.BaseMVVMPActivity
 import app.music.databinding.ActivitySettingBinding
 import app.music.utils.blur.DynamicBlurUtils
 import app.music.utils.intent.IntentMethodUtils
-import app.music.utils.viewmodel.ViewModelUtils
 import app.music.viewmodel.SettingActivityViewModel
 import kotlinx.android.synthetic.main.activity_setting.*
 
 
 class SettingActivity
-    : BaseMVVMActivity<ActivitySettingBinding, SettingActivityViewModel>() {
+    : BaseMVVMPActivity<ActivitySettingBinding, SettingActivityViewModel>() {
 
-    override fun getViewModel() = ViewModelUtils.getViewModel<SettingActivityViewModel>(this)
+    override fun getViewModel() = mViewModelProvider[SettingActivityViewModel::class.java]
 
     override fun initInject() = activityComponent.inject(this)
 

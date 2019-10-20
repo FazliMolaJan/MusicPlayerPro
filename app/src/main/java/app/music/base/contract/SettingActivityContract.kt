@@ -18,6 +18,6 @@ interface SettingActivityContract {
 
         val mIsDarkModeEnabled: ObservableBoolean
 
-        fun changeDarkMode(darkModeStatus: Boolean)
+        fun setDarkModeEnabledState(darkModeStatus: Boolean)
     }
 }

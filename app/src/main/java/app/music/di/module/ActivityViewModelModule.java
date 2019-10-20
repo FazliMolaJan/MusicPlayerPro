@@ -35,22 +35,4 @@ public class ActivityViewModelModule {
     static OnlineHomeActivityViewModel provideOnlineHomeActivityViewModel(ViewModelProvider viewModelProvider) {
         return viewModelProvider.get(OnlineHomeActivityViewModel.class);
     }
-
-    @Provides
-    @ActivityScope
-    static SettingActivityViewModel provideSettingActivityViewModel(ViewModelProvider viewModelProvider) {
-        return viewModelProvider.get(SettingActivityViewModel.class);
-    }
-
-    @Provides
-    @ActivityScope
-    static SplashActivityViewModel provideSplashActivityViewModel(ViewModelProvider viewModelProvider) {
-        return viewModelProvider.get(SplashActivityViewModel.class);
-    }
-
-    @Provides
-    @ActivityScope
-    static ChooseThemeActivityViewModel provideChooseThemeActivityViewModel(ViewModelProvider viewModelProvider) {
-        return viewModelProvider.get(ChooseThemeActivityViewModel.class);
-    }
 }
